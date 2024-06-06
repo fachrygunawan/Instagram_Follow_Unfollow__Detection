@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+</head>
+
+<body>
+    <h1>Differences Between Lists</h1>
+
+    {% if only_in_list1 %}
+    <h2>Users that you didn't follow back (Count: {{ only_in_list1|length }}):</h2>
+    <ul>
+        {% for user in only_in_list1 %}
+        <li>{{ user }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No users that you didn't follow back.</p>
+    {% endif %} {% if only_in_list2 %}
+    <h2>Users that didn't follow you back (Count: {{ only_in_list2|length }}):</h2>
+    <ul>
+        {% for user in only_in_list2 %}
+        <li>{{ user }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No users that didn't follow you back.</p>
+    {% endif %}
+
+    <form action="/" method="get">
+        <button type="submit">Go Back</button>
+    </form>
+</body>
+
+</html>
