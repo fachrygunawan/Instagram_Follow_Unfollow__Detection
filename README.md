@@ -8,5 +8,5 @@
 
 ## How to Run the App
 1. **Open Terminal or Command Prompt:** Navigate to the directory where you've downloaded this code.
-2. **Run the Application:** Execute the command `python run.py`.
+2. **Run the Application:** Execute the command `pip install flask` and then `python run.py`.
 3. **Enter Names:** Follow the prompts to enter the names from both the follower and following HTML files.
